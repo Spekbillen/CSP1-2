@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>jquery</title>
+  </head>
+  <body>
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <div
+      id="div"
+      style="background-color: red; height: 200px; width: 200px"
+    ></div>
+
+    <br />
+
+    <button id="idclass">change specific innerhtml (div and class)</button>
+    <p id="text" class="text1">id="text" class="text1"</p>
+    <p id="text" class="text2">id="text" class="text2"</p>
+    <p id="moretext" class="text1">id="moretext" class="text1"</p>
+    <p id="moretext" class="text2">id="moretext" class="text2"</p>
+    <p id="text">id="text"</p>
+    <p id="moretext">id="moretext"</p>
+    <p class="text1">class="text1"</p>
+    <p class="text2">class="text2"</p>
+    <div id="div1">
+      <p class="text1">text (class=text1) in a div (id=div1)</p>
+      <p class="text2">text (class=text2) in a div (id=div1)</p>
+    </div>
+
+    <br />
+
+    <div id="op-e">
+      <div>text</div>
+      <div class="somediv" id="somediv1">text</div>
+      <div class="somediv" id="somediv2">text</div>
+      <button onclick="sall()">all divs border+background</button>
+      <button onclick="adiv()">div with a id</button>
+      <button id="extrarule">extra rule 2 divs</button>
+    </div>
+  </body>
+</html>
