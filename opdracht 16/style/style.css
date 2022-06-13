@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+}
+
+#weerWrapper {
+    padding: 20px;
+}
+
+#weerTable {
+    background-color: rgba(0, 0, 0, 0.29)
+}
+
+h1 {
+    font-weight: 400;
+}
+
+th{
+    padding: 2px 30px !important;
+}
+
+th, td {
+    background-color: #e1e1e1;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 30px;
+}
