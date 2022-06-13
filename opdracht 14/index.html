@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/index.js"></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Wrapper {
+            display: flex;
+            margin: 20px 20px 0;
+            max-height: 90vh;
+            overflow-y: scroll;
+
+        }
+
+        table {
+            background: grey;
+        }
+
+        td {
+            padding: 10px 0 10px 10px;
+            min-width: 120px;
+            line-height: 100%;
+            background-color: white;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .landInfo {
+            margin: 0 20px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.86);
+            height: 110px;
+            padding: 10px;
+            display: none;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="Wrapper">
+    <table id="landenTable">
+        <tr>
+            <th>Land</th>
+            <th>Vlag</th>
+            <th>Grenslanden</th>
+            <th>Grenslanden-info</th>
+        </tr>
+    </table>
+    <div class="landInfo">
+
+    </div>
+</div>
+
+
+</body>
+</html>
