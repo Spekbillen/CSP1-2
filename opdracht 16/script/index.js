@@ -2,7 +2,6 @@ $.ajax({
     url: "https://api.openweathermap.org/data/2.5/forecast?lat=52.5168&lon=6.0830&appid=43dc92bc24e6f3c48cb3ccbaeb80567a&units=metric&lang=nl",
     success: (result) => {
         for(item of result.list) {
-            console.log()
             $('#weerTable').append(`
                 <tr>
                     <td>${item.dt_txt.substr(0,11)}</td>
