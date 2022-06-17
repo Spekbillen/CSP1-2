@@ -12,8 +12,8 @@ $.ajax({
         $(".continentSelect").append(`
             <select name="" id="country">
                 ${regions.map((item) => {
-            return '<option value="' + item + '">' + item + "</option>";
-        })}
+                    return '<option value="' + item + '">' + item + "</option>";
+                })}
             </select>
         `);
         $("#country").change((props) => {
@@ -31,7 +31,11 @@ $.ajax({
                             <tr>
                                 <td>${item["name"]["common"]}</td>
                                 <td>${item["capital"]}</td>
-                                <td>${ typeof item["borders"] !== "undefined" ? item["borders"].length : ""}</td>
+                                <td>${typeof item["borders"] !== "undefined" ? item["borders"].length : ""}</td>
+                                <td>${typeof item['borders'] !== 'undefined' ? '<select name="country" id="country" onchange="country(this)"><option value="select" selected disabled></option>' + item['borders'].map(item => { return '<option value="' + item + '">' + item + '</option>'
+                        }) + '</select>'
+                            : ''
+                        }</td>
                             </tr>
                         `;
                     }
@@ -40,3 +44,17 @@ $.ajax({
         });
     },
 });
+
+function country(props) {
+    for (let item of countryData) {
+        if (item.cca3 === props.value) {
+            $('.landInfo').html(`
+                <ul>
+                    <li>Land: ${item['name']['common']}</li>
+                    <li>Hoofdstad: ${item['capital'][0]}</li>
+                    <li>Populatie: ${item['population']}</li>
+                <ul>
+            `).css('display', 'block');
+        }
+    }
+}
